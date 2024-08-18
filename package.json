@@ -1,0 +1,52 @@
+{
+  "name": "co",
+  "displayName": "ero copilot",
+  "description": "AI-powered co-pilot",
+  "version": "0.0.1",
+  "icon": "logo.PNG",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:co.beautifyCode"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "co.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "co.beautifyCode",
+        "title": "Beautify Code"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "prettier": "^2.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivam789654/plant"
+  },
+  "bugs": {
+    "url": "https://github.com/shivam789654/plant"
+  },
+  "homepage": "https://github.com/shivam789654/plant"
+}
