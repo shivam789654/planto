@@ -1,0 +1,99 @@
+/* Apply background image to the body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('sycamore.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Add a semi-transparent background to input, button, and output for readability */
+input[type="text"], button, #responseOutput {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input field */
+input[type="text"] {
+    margin-bottom: 20px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    width: 320px;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Style the button */
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 320px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #004080;
+    transform: translateY(0);
+}
+
+/* Style the output text block */
+#responseOutput {
+    font-size: 20px;
+    color: #011b07;
+    text-align: left;
+    white-space: pre-wrap;
+    width: 100%;  /* Make the output block wider */
+    max-width: 600px;  /* Set a max width */
+    height: 200px;  /* Increase the height */
+    padding: 15px;  /* Add more padding */
+    margin-top: 20px;
+    overflow-y: auto;  /* Allow scrolling if the content is too large */
+    box-shadow: 0px 4px 8px rgba(146, 69, 69, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly increase the opacity for better readability */
+}
+
+/* Additional styling for layout and readability */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(27, 223, 76, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(26, 14, 199, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #be1010;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    input[type="text"], button, #responseOutput {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
