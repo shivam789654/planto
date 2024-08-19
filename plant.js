@@ -3,20 +3,6 @@ function api() {
 
     var promptText = document.getElementById("promptInput").value;
 
-    // Check if the promptText is "hi"
-    if (promptText.toLowerCase() === "hi") {
-        setTimeout(function() {  // Add latency here
-            document.getElementById("responseOutput").textContent = "How can I help you?";
-        }, 2000);  // 2000 milliseconds = 2 seconds delay
-        return;  // Exit the function to prevent the API call
-    }
-    if (promptText.toLowerCase() === "what is ai") {
-        setTimeout(function() {  // Add latency here
-            document.getElementById("responseOutput").textContent = "AI, or Artificial Intelligence, is technology that enables machines to mimic human thinking, learning, and problem-solving, automating tasks and enhancing decision-making through algorithms and data.";
-        }, 2000);  // 2000 milliseconds = 2 seconds delay
-        return;  // Exit the function to prevent the API call
-    }
-
     var xhr = new XMLHttpRequest();
 
     xhr.onload = function() {
